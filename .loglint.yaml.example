@@ -1,0 +1,13 @@
+linters-settings:
+  custom:
+    loglint:
+      # путь к собранному бинарнику
+      path: ./loglint
+      args:
+        - -sensitive-words=pass,secret
+      description: Линтер для логов
+      original-url: github.com/SANEKNAYMCHIK/log-linter
+
+linters:
+  enable:
+    - loglint
