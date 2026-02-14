@@ -48,23 +48,12 @@ linters:
 Запустите golangci-lint run.
 
 ## Конфигурация
-Линтер поддерживает флаги командной строки (передаются через golangci-lint в секции args):
+Линтер поддерживает флаги командной строки (передаются через golangci-lint в секции settings):
 
-**-sensitive-words** – список слов через запятую (по умолчанию password,secret,token,key)
+**sensitive-words** – список слов через запятую (по умолчанию password,secret,token,key)
 
-**-sensitive-patterns** – список регулярных выражений для поиска чувствительных данных (например, \b\d{16}\b для номеров карт)
+**sensitive-patterns** – список регулярных выражений для поиска чувствительных данных (например, \b\d{16}\b для номеров карт)
 
-#### Пример .golangci.yml с настройками:
-
-```yaml
-linters-settings:
-  custom:
-    loglint:
-      path: ./loglint
-      args:
-        - -sensitive-words=pass,secret
-        - -sensitive-patterns=\b\d{16}\b
-```
 
 #### Автоисправление
 Правило lowercase поддерживает автоматическое исправление. 

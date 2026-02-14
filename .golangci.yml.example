@@ -1,0 +1,11 @@
+version: "2"
+
+linters:
+  settings:
+    custom:
+      loglint:
+        path: ./loglint.so
+        settings:
+          sensitive-words: "password,secret,token"
+        description: "Линтер для проверки логов"
+        original-url: github.com/SANEKNAYMCHIK/log-linter
